@@ -2,13 +2,13 @@ name: Build and Push Docker Image to Docker Hub
 
 on:
   push:
-    branches: [ main ]
+    branches: [ rw ]
     paths:
       - 'Dockerfile'
       - 'index.js'
       - 'package.json'
   pull_request:
-    branches: [ main ]
+    branches: [ rw ]
   workflow_dispatch:
 
 jobs:
