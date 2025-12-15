@@ -16,6 +16,17 @@
             padding: 20px;
             color: #333;
         }
+        /* 毛玻璃背景遮罩层 */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.25); /* 可调深浅 */
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: -1;
+        }
+
         
         .header {
             color: #fff;
