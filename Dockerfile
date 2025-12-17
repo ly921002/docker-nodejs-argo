@@ -1,15 +1,14 @@
 FROM node:alpine3.20
 
-WORKDIR /tmp
+WORKDIR /app
+
+COPY package.json ./
+RUN npm install --production
 
 COPY . .
 
-EXPOSE 3000/tcp
-
-RUN apk update && apk upgrade &&\
-    apk add --no-cache openssl curl gcompat iproute2 coreutils &&\
-    apk add --no-cache bash &&\
-    chmod +x index.js &&\
-    npm install
+RUN apk add --no-cache gcompat curl ca-certificates iproute2 coreutils bash
+    
+EXPOSE 30000/tcp
 
 CMD ["node", "index.js"]
