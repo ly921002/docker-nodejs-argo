@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  nodejs-argo:
+    image: ly920907/nodejs:noagent
+    container_name: nodejs-argo
+    restart: always
+    ports:
+      - "30000:30000"
+    environment:
+      - ARGO_AUTH=ey
+    network_mode: host     # 使用宿主机网络
+    
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
