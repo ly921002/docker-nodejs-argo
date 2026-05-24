@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   nodejs-argo:
-    image: ly920907/nodejs:noagent
+    image: ly920907/nodejs:empty
     container_name: nodejs-argo
     restart: always
     ports:
