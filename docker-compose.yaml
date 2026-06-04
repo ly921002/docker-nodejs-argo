@@ -10,8 +10,8 @@ services:
     environment:
       - SUB_PATH = sub  #订阅路径
       - UUID = xx
-      - WS_PATH_BASE = /api/v1 #ws固定路径
-      - WS_PATH_LEN = 8  #ws随机路径长度
+      - XHTTP_PATH_BASE = /api/v1 #ws固定路径
+      - XHTTP_PATH_LEN = 8  #ws随机路径长度
       - ARGO_AUTH = ey  #隧道token
       - ARGO_PORT = 8001 #隧道端口
       - ARGO_DOMAIN = domain #隧道域名
