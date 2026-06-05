@@ -2,14 +2,14 @@ name: Build and Push Docker Image to Docker Hub
 
 on:
   push:
-    branches: [ rw ]
+    branches: [ koyeb ]
     paths:
       - 'Dockerfile'
       - 'index.js'
       - 'package.json'
       - 'index.html'
   pull_request:
-    branches: [ rw ]
+    branches: [ koyeb ]
   workflow_dispatch:
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/nodejs:rw
+            ${{ secrets.DOCKERHUB_USERNAME }}/nodejs:koyeb
           labels: |
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.description=HTTP Server
