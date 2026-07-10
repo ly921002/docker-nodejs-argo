@@ -7,7 +7,7 @@ RUN npm install --production
 
 # 2. 只复制必需的文件和目录
 COPY index.js ./
-COPY public ./public
+COPY index.html ./
 
 RUN apk add --no-cache gcompat curl ca-certificates iproute2 coreutils bash
     
