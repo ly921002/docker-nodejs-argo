@@ -12,5 +12,6 @@ COPY index.html ./
 RUN apk add --no-cache gcompat curl ca-certificates iproute2 coreutils bash
     
 EXPOSE 3000/tcp
+EXPOSE 3001/tcp
 
 CMD ["node", "index.js"]
